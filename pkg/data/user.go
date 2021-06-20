@@ -11,12 +11,17 @@
 
 package user
 
+type LoginResult struct {
+	Token string
+}
+
 type Info struct {
 	Email string `json:"email"`
 	Name  string `json:"fullName"`
 }
 
 type Status string
+
 const Unverified Status = "unverified"
 const Verified Status = "active"
 const Blocked Status = "blocked"
