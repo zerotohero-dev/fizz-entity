@@ -9,7 +9,7 @@
  *  (& )`   (,((,((;( ))\,
  */
 
-package user
+package data
 
 type LoginResult struct {
 	Token string
