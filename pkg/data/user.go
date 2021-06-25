@@ -22,13 +22,17 @@ type Info struct {
 	Name  string `json:"fullName"`
 }
 
+type Token struct {
+	Email                  string `json:"email"`
+	EmailVerificationToken string `json:"emailVerificationToken"`
+	PasswordResetToken     string `json:"passwordResetToken"`
+}
+
 type User struct {
 	Info
 	Password                string `json:"password"`
-	SubscribedToMailingList bool   `json:"subscribedToMailingList"`
 	Status                  Status `json:"status"`
-	EmailVerificationToken  string `json:"accountActivationToken"`
-	PasswordResetToken      string `json:"passwordResetToken"`
+	SubscribedToMailingList bool   `json:"optIn"`
 	RecordCreated           int64  `json:"recordCreated"`
 	RecordUpdated           int64  `json:"recordUpdated"`
 }
