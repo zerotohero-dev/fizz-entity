@@ -32,11 +32,9 @@ type LogOutResponse struct {
 }
 
 type SignUpRequest struct {
-	Name     string `json:"name"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
-	OptIn    bool   `json:"optIn"`
-	Err      string `json:"err,omitempty"`
+	Name  string `json:"name"`
+	Email string `json:"email"`
+	Err   string `json:"err,omitempty"`
 }
 
 type SignUpResponse struct {
