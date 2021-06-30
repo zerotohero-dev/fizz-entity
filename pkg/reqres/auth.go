@@ -1,7 +1,7 @@
 /*
  *  \
  *  \\,
- *   \\\,^,.,,.                    “Zero to Hero”
+ *   \\\,^,.,,.                     Zero to Hero
  *   ,;7~((\))`;;,,               <zerotohero.dev>
  *   ,(@') ;)`))\;;',    stay up to date, be curious: learn
  *    )  . ),((  ))\;,
@@ -11,7 +11,6 @@
 
 package reqres
 
-
 type LogInRequest struct {
 	Email    string `json:"email"`
 	Password string `json:"password"`
@@ -20,8 +19,8 @@ type LogInRequest struct {
 
 // TODO: maybe some additional payload about subscription status.
 type LogInResponse struct {
-	AuthToken string   `json:"token"`
-	Err       string   `json:"err,omitempty"`
+	AuthToken string `json:"token"`
+	Err       string `json:"err,omitempty"`
 }
 
 type LogOutRequest struct {
@@ -33,7 +32,7 @@ type LogOutResponse struct {
 }
 
 type SignUpRequest struct {
-	Name string `json:"name"`
+	Name     string `json:"name"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
 	OptIn    bool   `json:"optIn"`

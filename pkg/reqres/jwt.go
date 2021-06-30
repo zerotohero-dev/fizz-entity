@@ -1,7 +1,7 @@
 /*
  *  \
  *  \\,
- *   \\\,^,.,,.                    “Zero to Hero”
+ *   \\\,^,.,,.                     Zero to Hero
  *   ,;7~((\))`;;,,               <zerotohero.dev>
  *   ,(@') ;)`))\;;',    stay up to date, be curious: learn
  *    )  . ),((  ))\;,
@@ -12,8 +12,8 @@
 package reqres
 
 type JwtCreateRequest struct {
-	Email   string   `json:"email"`
-	Err     string   `json:"err,omitempty"`
+	Email string `json:"email"`
+	Err   string `json:"err,omitempty"`
 }
 
 type JwtCreateResponse struct {
@@ -31,8 +31,8 @@ type JwtVerifyRequest struct {
 //     Expires: Unix timestamp at when the token will expire.
 //     Email: The email of the token’s owner.
 type JwtVerifyResponse struct {
-	Valid   bool     `json:"valid"`
-	Email   string   `json:"email"`
-	Expires int64    `json:"expires"`
-	Err     string   `json:"err,omitempty"`
+	Valid   bool   `json:"valid"`
+	Email   string `json:"email"`
+	Expires int64  `json:"expires"`
+	Err     string `json:"err,omitempty"`
 }
