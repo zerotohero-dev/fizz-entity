@@ -2,13 +2,14 @@ package connection
 
 import (
 	"context"
+	"github.com/zerotohero-dev/fizz-env/pkg/env"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 var db *mongo.Client
 
-func initialize(dbConnectionString string) {
+func Initialize(dbConnectionString string) {
 	ctx, _ := context.WithTimeout(context.Background(), initTimeout)
 
 	clientOptions := options.Client().ApplyURI(dbConnectionString)
@@ -24,10 +25,14 @@ func initialize(dbConnectionString string) {
 
 var inited = false
 
-func Db(dbName, dbConnectionString string) *mongo.Database {
-	if !inited {
-		initialize(dbConnectionString)
-		inited = true
+func init() {
+	e := env.New()
+	e.Db.Sanitize()
+}
+
+func Db(dbName string) *mongo.Database {
+	if db == nil {
+		return nil
 	}
 
 	return db.Database(dbName)
