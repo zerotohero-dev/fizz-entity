@@ -17,7 +17,6 @@ type Info struct {
 }
 
 type Token struct {
-	Email                  string `json:"email"`
 	EmailVerificationToken string `json:"emailVerificationToken"`
 	PasswordResetToken     string `json:"passwordResetToken"`
 }
