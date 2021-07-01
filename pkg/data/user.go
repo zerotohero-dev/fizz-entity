@@ -11,12 +11,6 @@
 
 package data
 
-type Status string
-
-const Unverified Status = "unverified"
-const Verified Status = "active"
-const Blocked Status = "blocked"
-
 type Info struct {
 	Email string `json:"email"`
 	Name  string `json:"fullName"`
@@ -31,7 +25,7 @@ type Token struct {
 type User struct {
 	Info
 	Password                string `json:"password"`
-	Status                  Status `json:"status"`
+	Status                  string `json:"status"`
 	SubscribedToMailingList bool   `json:"optIn"`
 	RecordCreated           int64  `json:"recordCreated"`
 	RecordUpdated           int64  `json:"recordUpdated"`

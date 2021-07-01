@@ -29,7 +29,8 @@ var Keys = struct {
 	Password:               "password",
 }
 
-var States = struct {
+// Status enum.
+var Status = struct {
 	Unverified string
 	Verified   string
 	Blocked    string
