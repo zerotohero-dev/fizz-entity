@@ -16,6 +16,6 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
-func Collection(dbName, connectionString, tableName string) *mongo.Collection {
+func Collection(dbName, tableName, connectionString string) *mongo.Collection {
 	return connection.Db(dbName, connectionString).Collection(tableName)
 }
