@@ -43,6 +43,7 @@ type SignUpResponse struct {
 
 type EmailVerificationRequest struct {
 	Email string `json:"email"`
+	Name  string `json:"name"`
 	Token string `json:"token"`
 	Err   string `json:"err,omitempty"`
 }
