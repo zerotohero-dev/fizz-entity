@@ -24,6 +24,7 @@ type Token struct {
 
 type User struct {
 	Info
+	Token
 	Password                string `json:"password"`
 	Status                  string `json:"status"`
 	SubscribedToMailingList bool   `json:"optIn"`
