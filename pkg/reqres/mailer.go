@@ -48,6 +48,7 @@ type RelayPasswordResetMessageRequest struct {
 	Email string `json:"email"`
 	Token string `json:"token"`
 	Name  string `json:"name"`
+	Err   string `json:"err,omitempty"`
 }
 
 type RelayPasswordResetMessageResponse struct {
