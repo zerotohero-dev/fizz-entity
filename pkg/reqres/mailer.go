@@ -33,3 +33,13 @@ type RelayEmailVerificationMessageResponse struct {
 	Relayed bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
+
+type RelayPasswordResetConfirmationRequest struct {
+	Email string `json:"email"`
+	Name  string `json:"name"`
+}
+
+type RelayPasswordResetConfirmationResponse struct {
+	Relayed bool   `json:"relayed"`
+	Err     string `json:"err,omitempty"`
+}
