@@ -1,35 +1,35 @@
 package reqres
 
-type RelayWelcomeEmailRequest struct {
+type RelayWelcomeMessageRequest struct {
 	Email string `json:"email"`
 	Name  string `json:"name"`
 	Err   string `json:"err,omitempty"`
 }
 
-type RelayWelcomeEmailResponse struct {
+type RelayWelcomeMessageResponse struct {
 	Relayed bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
 
-type RelayEmailVerifiedEmailRequest struct {
+type RelayEmailVerifiedMessageRequest struct {
 	Email string `json:"email"`
 	Name  string `json:"name"`
 	Err   string `json:"err,omitempty"`
 }
 
-type RelayEmailVerifiedEmailResponse struct {
+type RelayEmailVerifiedMessageResponse struct {
 	Relayed bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
 
-type RelaySendEmailVerificationEmailRequest struct {
+type RelaySendEmailVerificationMessageRequest struct {
 	Email string `json:"email"`
 	Name  string `json:"name"`
 	Token string `json:"token"`
 	Err   string `json:"err,omitempty"`
 }
 
-type RelaySendEmailVerificationEmailResponse struct {
+type RelaySendEmailVerificationMessageResponse struct {
 	Relayed bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
