@@ -43,3 +43,14 @@ type RelayPasswordResetConfirmationMessageResponse struct {
 	Relayed bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
+
+type RelayPasswordResetMessageRequest struct {
+	Email string `json:"email"`
+	Token string `json:"token"`
+	Name  string `json:"name"`
+}
+
+type RelayPasswordResetMessageResponse struct {
+	Relayed bool   `json:"relayed"`
+	Err     string `json:"err,omitempty"`
+}
