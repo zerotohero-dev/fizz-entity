@@ -22,14 +22,14 @@ type RelayEmailVerifiedMessageResponse struct {
 	Err     string `json:"err,omitempty"`
 }
 
-type RelaySendEmailVerificationMessageRequest struct {
+type RelayEmailVerificationMessageRequest struct {
 	Email string `json:"email"`
 	Name  string `json:"name"`
 	Token string `json:"token"`
 	Err   string `json:"err,omitempty"`
 }
 
-type RelaySendEmailVerificationMessageResponse struct {
+type RelayEmailVerificationMessageResponse struct {
 	Relayed bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
