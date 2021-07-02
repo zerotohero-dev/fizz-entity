@@ -17,7 +17,6 @@ type LogInRequest struct {
 	Err      string `json:"err,omitempty"`
 }
 
-// TODO: maybe some additional payload about subscription status.
 type LogInResponse struct {
 	AuthToken string `json:"token"`
 	Err       string `json:"err,omitempty"`
@@ -41,18 +40,6 @@ type SignUpResponse struct {
 	Err string `json:"err,omitempty"`
 }
 
-type EmailVerificationRequest struct {
-	Email string `json:"email"`
-	Name  string `json:"name"`
-	Token string `json:"token"`
-	Err   string `json:"err,omitempty"`
-}
-
-type EmailVerificationResponse struct {
-	Verified bool   `json:"verified"`
-	Err      string `json:"err,omitempty"`
-}
-
 type ForgotPasswordRequest struct {
 	Email string `json:"email"`
 	Err   string `json:"err,omitempty"`
@@ -73,4 +60,16 @@ type ResetPasswordRequest struct {
 type ResetPasswordResponse struct {
 	Message string `json:"message"`
 	Err     string `json:"err,omitempty"`
+}
+
+type VerifyEmailRequest struct {
+	Email string `json:"email"`
+	Name  string `json:"name"`
+	Token string `json:"token"`
+	Err   string `json:"err,omitempty"`
+}
+
+type VerifyEmailResponse struct {
+	Verified bool   `json:"verified"`
+	Err      string `json:"err,omitempty"`
 }
