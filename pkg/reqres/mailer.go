@@ -7,7 +7,7 @@ type RelayWelcomeMessageRequest struct {
 }
 
 type RelayWelcomeMessageResponse struct {
-	Relayed bool   `json:"relayed"`
+	Success bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
 
@@ -18,7 +18,7 @@ type RelayEmailVerifiedMessageRequest struct {
 }
 
 type RelayEmailVerifiedMessageResponse struct {
-	Relayed bool   `json:"relayed"`
+	Success bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
 
@@ -30,7 +30,7 @@ type RelayEmailVerificationMessageRequest struct {
 }
 
 type RelayEmailVerificationMessageResponse struct {
-	Relayed bool   `json:"relayed"`
+	Success bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
 
@@ -40,7 +40,7 @@ type RelayPasswordResetConfirmationMessageRequest struct {
 }
 
 type RelayPasswordResetConfirmationMessageResponse struct {
-	Relayed bool   `json:"relayed"`
+	Success bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
 
@@ -52,6 +52,6 @@ type RelayPasswordResetMessageRequest struct {
 }
 
 type RelayPasswordResetMessageResponse struct {
-	Relayed bool   `json:"relayed"`
+	Success bool   `json:"relayed"`
 	Err     string `json:"err,omitempty"`
 }
