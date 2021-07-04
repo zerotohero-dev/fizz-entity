@@ -37,6 +37,7 @@ type RelayEmailVerificationMessageResponse struct {
 type RelayPasswordResetConfirmationMessageRequest struct {
 	Email string `json:"email"`
 	Name  string `json:"name"`
+	Err   string `json:"err,omitempty"`
 }
 
 type RelayPasswordResetConfirmationMessageResponse struct {
