@@ -62,14 +62,16 @@ type ResetPasswordResponse struct {
 	Err     string `json:"err,omitempty"`
 }
 
-type VerifyEmailRequest struct {
-	Email string `json:"email"`
-	Name  string `json:"name"`
-	Token string `json:"token"`
-	Err   string `json:"err,omitempty"`
+type CreateAccountRequest struct {
+	Email                  string `json:"email"`
+	Name                   string `json:"name"`
+	Token                  string `json:"token"`
+	Password               string `json:"password"`
+	SubscribeToMailingList bool   `json:"optIn"`
+	Err                    string `json:"err,omitempty"`
 }
 
-type VerifyEmailResponse struct {
+type CreateAccountResponse struct {
 	Verified bool   `json:"verified"`
 	Err      string `json:"err,omitempty"`
 }
