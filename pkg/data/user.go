@@ -14,21 +14,21 @@ package data
 import "time"
 
 type Info struct {
-	Email string `json:"email"`
-	Name  string `json:"fullName"`
+	Email string `json:"email" bson:"email"`
+	Name  string `json:"name" bson:"name"`
 }
 
 type Token struct {
-	EmailVerificationToken string `json:"emailVerificationToken"`
-	PasswordResetToken     string `json:"passwordResetToken"`
+	EmailVerificationToken string `json:"emailVerificationToken" bson:"emailVerificationToken"`
+	PasswordResetToken     string `json:"passwordResetToken" bson:"passwordResetToken"`
 }
 
 type User struct {
 	Info
 	Token
-	Password                string    `json:"password"`
-	Status                  string    `json:"status"`
-	SubscribedToMailingList bool      `json:"optIn"`
-	RecordCreated           time.Time `json:"recordCreated"`
-	RecordUpdated           time.Time `json:"recordUpdated"`
+	Password                string    `json:"password" bson:"password"`
+	Status                  string    `json:"status" bson:"status"`
+	SubscribedToMailingList bool      `json:"optIn" bson:"optIn"`
+	RecordCreated           time.Time `json:"recordCreated" bson:"recordCreated"`
+	RecordUpdated           time.Time `json:"recordUpdated" bson:"recordUpdated"`
 }

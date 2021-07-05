@@ -19,12 +19,12 @@ import "time"
 // matching subscription, we don’t cache the response. The TTL for the
 // cache is 24 hours.
 type CachedSubscription struct {
-	Email               string
-	StripeProductId     string
-	StripePriceId       string
-	StripeCurrency      string
-	StripeUnitAmount    int
-	StripeInterval      string // "month"
-	StriveIntervalCount int    // 1: monthly, 12: yearly
-	RecordCreated       time.Time
+	Email               string    `json:"email" bson:"email"`
+	StripeProductId     string    `json:"stripeProductId" bson:"stripeProductId"`
+	StripePriceId       string    `json:"stripePriceId" bson:"stripePriceId"`
+	StripeCurrency      string    `json:"stripeCurrency" bson:"stripeCurrency"`
+	StripeUnitAmount    int       `json:"stripeUnitAmount" bson:"stripeUnitAmount"`
+	StripeInterval      string    `json:"stripeInterval" bson:"stripeInterval"`           // "month"
+	StripeIntervalCount int       `json:"stripeIntervalCount" bson:"stripeIntervalCount"` // 1: monthly, 12: yearly
+	RecordCreated       time.Time `json:"recordCreated" bson:"recordCreated"`
 }
