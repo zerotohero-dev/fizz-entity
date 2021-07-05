@@ -14,6 +14,7 @@ type RelayWelcomeMessageResponse struct {
 type RelayEmailVerifiedMessageRequest struct {
 	Email string `json:"email"`
 	Name  string `json:"name"`
+	Token string `json:"token"`
 	Err   string `json:"err,omitempty"`
 }
 
