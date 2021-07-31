@@ -12,21 +12,23 @@
 package data
 
 var Keys = struct {
-	Email                  string
-	Status                 string
-	Name                   string
-	EmailVerificationToken string
-	RecordUpdated          string
-	RecordCreated          string
-	Password               string
+	Email                   string
+	Status                  string
+	Name                    string
+	EmailVerificationToken  string
+	RecordUpdated           string
+	RecordCreated           string
+	Password                string
+	SubscribedToMailingList string
 }{
-	Email:                  "email",
-	Status:                 "status",
-	Name:                   "Name",
-	EmailVerificationToken: "emailVerificationToken",
-	RecordCreated:          "recordCreated",
-	RecordUpdated:          "recordUpdated",
-	Password:               "password",
+	Email:                   "email",
+	Status:                  "status",
+	Name:                    "Name",
+	EmailVerificationToken:  "emailVerificationToken",
+	RecordCreated:           "recordCreated",
+	RecordUpdated:           "recordUpdated",
+	Password:                "password",
+	SubscribedToMailingList: "optIn",
 }
 
 // Status enum.
