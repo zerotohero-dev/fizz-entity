@@ -21,9 +21,10 @@ type User struct {
 	EmailVerificationToken string `json:"emailVerificationToken" bson:"emailVerificationToken"`
 	PasswordResetToken     string `json:"passwordResetToken" bson:"passwordResetToken"`
 	// Rest
-	Password                string    `json:"password" bson:"password"`
-	Status                  string    `json:"status" bson:"status"`
-	SubscribedToMailingList bool      `json:"optIn" bson:"optIn"`
-	RecordCreated           time.Time `json:"recordCreated" bson:"recordCreated"`
-	RecordUpdated           time.Time `json:"recordUpdated" bson:"recordUpdated"`
+	Password                string              `json:"password" bson:"password"`
+	Status                  string              `json:"status" bson:"status"`
+	SubscribedToMailingList bool                `json:"optIn" bson:"optIn"`
+	StripeSubscription      *StripeSubscription `json:"subscription" bson:"subscription"`
+	RecordCreated           time.Time           `json:"recordCreated" bson:"recordCreated"`
+	RecordUpdated           time.Time           `json:"recordUpdated" bson:"recordUpdated"`
 }

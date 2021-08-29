@@ -13,12 +13,12 @@ package data
 
 import "time"
 
-// CachedSubscription is the entity that we use to store the cached
+// StripeSubscription is the entity that we use to store the cached
 // Stripe subscription API call results. We make a request to Stripe
 // API and cache the response IF there is a match. If there is no
 // matching subscription, we don’t cache the response. The TTL for the
 // cache is 24 hours.
-type CachedSubscription struct {
+type StripeSubscription struct {
 	Email               string    `json:"email" bson:"email"`
 	StripeProductId     string    `json:"stripeProductId" bson:"stripeProductId"`
 	StripePriceId       string    `json:"stripePriceId" bson:"stripePriceId"`
