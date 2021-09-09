@@ -17,8 +17,8 @@ type UserInfoRequest struct {
 }
 
 type UserInfoResponse struct {
-	Email         string   `json:"email"`
-	Subscriptions []string `json:"courses"`
-	Name          string   `json:"name"`
-	Err           string   `json:"err,omitempty"`
+	Email        string `json:"email"`
+	Subscription string `json:"subscription"`
+	Name         string `json:"name"`
+	Err          string `json:"err,omitempty"`
 }
