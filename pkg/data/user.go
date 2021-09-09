@@ -28,3 +28,9 @@ type User struct {
 	RecordCreated           time.Time           `json:"recordCreated" bson:"recordCreated"`
 	RecordUpdated           time.Time           `json:"recordUpdated" bson:"recordUpdated"`
 }
+
+type UserInfo struct {
+	Email        string `json:"email"`
+	FullName     string `json:"fullName"`
+	Subscription string `json:"subscription"`
+}
