@@ -31,6 +31,6 @@ type User struct {
 
 type UserInfo struct {
 	Email        string `json:"email"`
-	FullName     string `json:"fullName"`
+	Name         string `json:"fullName"`
 	Subscription string `json:"subscription"`
 }
