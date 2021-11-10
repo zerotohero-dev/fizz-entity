@@ -11,7 +11,15 @@
 
 package reqres
 
+type FizzServiceName string
+
+const IdmService FizzServiceName = "idm"
+const CryptoService FizzServiceName = "crypto"
+const MailerService FizzServiceName = "mailer"
+
 type MtlsApiRequest struct {
-	Endpoint string `json:"endpoint"`
-	Method   string `json:"method"`
+	Service  FizzServiceName `json:"service"`
+	Endpoint string          `json:"endpoint"`
+	Method   string          `json:"method"`
+	Body     string          `json:"body"`
 }
