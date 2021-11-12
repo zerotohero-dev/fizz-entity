@@ -11,6 +11,8 @@
 
 package reqres
 
+import "github.com/zerotohero-dev/fizz-entity/pkg/method"
+
 type FizzServiceName string
 
 const IdmService FizzServiceName = "idm"
@@ -20,6 +22,6 @@ const MailerService FizzServiceName = "mailer"
 type MtlsApiRequest struct {
 	Service  FizzServiceName `json:"service"`
 	Endpoint string          `json:"endpoint"`
-	Method   string          `json:"method"`
+	Method   method.Method   `json:"method"`
 	Body     string          `json:"body"`
 }
