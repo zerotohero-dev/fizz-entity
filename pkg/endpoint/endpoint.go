@@ -24,3 +24,17 @@ var Crypto = struct {
 	JwtVerify:        "/v1/jwt/verify",
 	SecureToken:      "/v1/token",
 }
+
+var Mailer = struct {
+	Verification         string
+	Welcome              string
+	PasswordReset        string
+	PasswordResetConfirm string
+	SubscriptionConfirm  string
+}{
+	Verification:         "/v1/relay/verification",
+	Welcome:              "/v1/relay/welcome",
+	PasswordReset:        "/v1/relay/reset",
+	PasswordResetConfirm: "/v1/relay/confirm",
+	SubscriptionConfirm:  "/v1/relay/subscribed",
+}
