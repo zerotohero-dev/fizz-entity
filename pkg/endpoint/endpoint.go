@@ -38,3 +38,19 @@ var Mailer = struct {
 	PasswordResetConfirm: "/v1/relay/confirm",
 	SubscriptionConfirm:  "/v1/relay/subscribed",
 }
+
+var Idm = struct {
+	Info           string
+	Login          string
+	SignUp         string
+	CreateAccount  string
+	RemindPassword string
+	ResetPassword  string
+}{
+	Info:           "/v1/info",
+	Login:          "/v1/login",
+	SignUp:         "/v1/signup",
+	CreateAccount:  "/v1/create",
+	RemindPassword: "/v1/remind",
+	ResetPassword:  "/v1/reset",
+}
